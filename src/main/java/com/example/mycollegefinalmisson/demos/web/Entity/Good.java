@@ -20,43 +20,5 @@ public class Good {
     private String GoodCost;
     private String GoodCount;
 
-    public int getGoodId() {
-        return GoodId;
-    }
 
-    public void setGoodId(int goodId) {
-        GoodId = goodId;
-    }
-
-    public String getGoodName() {
-        return GoodName;
-    }
-
-    public void setGoodName(String goodName) {
-        GoodName = goodName;
-    }
-
-    public String getGoodDetails() {
-        return GoodDetails;
-    }
-
-    public void setGoodDetails(String goodDetails) {
-        GoodDetails = goodDetails;
-    }
-
-    public String getGoodCost() {
-        return GoodCost;
-    }
-
-    public void setGoodCost(String goodCost) {
-        GoodCost = goodCost;
-    }
-
-    public String getGoodCount() {
-        return GoodCount;
-    }
-
-    public void setGoodCount(String goodCount) {
-        GoodCount = goodCount;
-    }
 }

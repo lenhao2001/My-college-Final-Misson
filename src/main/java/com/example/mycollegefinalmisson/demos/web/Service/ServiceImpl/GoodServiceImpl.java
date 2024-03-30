@@ -24,12 +24,14 @@ public class GoodServiceImpl implements GoodService {
     @Override
     public List<Good> getIndexGoodsPage() {
 
-        QueryWrapper<Good> queryWrapper = new QueryWrapper<>();
-        queryWrapper.select("GoodName","GoodCost","GoodCount"); //bug ERROR 28348[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.mycollegefinalmisson.demos.web.Mapper.GoodMapper.selectList] with root cause
+//        QueryWrapper<Good> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.select("GoodName","GoodCost","GoodCount"); //bug ERROR 28348[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.mycollegefinalmisson.demos.web.Mapper.GoodMapper.selectList] with root cause
+//        queryWrapper.select("true");
+//        List<Good> goodList = goodMapper.selectList(queryWrapper);
+//        System.out.println(goodList.toString());
 
-        List<Good> goodList = goodMapper.selectList(queryWrapper);
+        List<Good> goodList = goodMapper.selectListTEST();
 
-        System.out.println(goodList.toString());
         return goodList;
     }
 }

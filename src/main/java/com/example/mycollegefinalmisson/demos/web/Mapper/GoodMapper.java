@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.mycollegefinalmisson.demos.web.Entity.Good;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -15,7 +16,6 @@ import java.util.List;
  */
 @Mapper
 public interface GoodMapper extends BaseMapper<Good> {
-
-    @Override
-    List<Good> selectList(Wrapper<Good> queryWrapper);
+    @Select("SELECT * FROM good")
+    List<Good> selectListTEST();
 }
