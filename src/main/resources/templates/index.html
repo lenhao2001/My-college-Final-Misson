@@ -1,0 +1,20 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title >default Index</title>
+</head>
+<body>
+    <h5 th:text="${message}">Hello there! </h5>
+    <h5>testtest!!!</h5>
+
+    <p th:each="good : ${goodsList}">
+        <span th:text="${good.getGoodName()}">Default</span>
+        <span th:text="${good.getGoodCost()}">Default</span>
+        <span th:text="${good.getGoodCount()}">Default</span>
+    </p>
+</body>
+</html>
