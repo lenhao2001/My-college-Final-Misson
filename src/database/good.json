@@ -1,0 +1,88 @@
+{
+    "RECORDS": [
+        {
+            "GoodId": "1",
+            "GoodName": "产品A",
+            "GoodDetails": "root这是产品A的详细信息",
+            "GoodCost": "10.99",
+            "GoodCount": "5"
+        },
+        {
+            "GoodId": "2",
+            "GoodName": "产品B",
+            "GoodDetails": "root这是产品B的详细信息",
+            "GoodCost": "15.99",
+            "GoodCount": "10"
+        },
+        {
+            "GoodId": "3",
+            "GoodName": "产品C",
+            "GoodDetails": "这是产品C的详细信息",
+            "GoodCost": "20.50",
+            "GoodCount": "3"
+        },
+        {
+            "GoodId": "4",
+            "GoodName": "产品D",
+            "GoodDetails": "这是产品D的详细信息",
+            "GoodCost": "8.75",
+            "GoodCount": "20"
+        },
+        {
+            "GoodId": "5",
+            "GoodName": "产品E",
+            "GoodDetails": "这是产品E的详细信息",
+            "GoodCost": "12.49",
+            "GoodCount": "8"
+        },
+        {
+            "GoodId": "6",
+            "GoodName": "产品F",
+            "GoodDetails": "这是产品F的详细信息",
+            "GoodCost": "19.99",
+            "GoodCount": "15"
+        },
+        {
+            "GoodId": "7",
+            "GoodName": "产品G",
+            "GoodDetails": "root这是产品G的详细信息",
+            "GoodCost": "9.99",
+            "GoodCount": "7"
+        },
+        {
+            "GoodId": "8",
+            "GoodName": "产品H",
+            "GoodDetails": "这是产品H的详细信息",
+            "GoodCost": "14.50",
+            "GoodCount": "4"
+        },
+        {
+            "GoodId": "9",
+            "GoodName": "产品I",
+            "GoodDetails": "这是产品I的详细信息",
+            "GoodCost": "11.25",
+            "GoodCount": "12"
+        },
+        {
+            "GoodId": "10",
+            "GoodName": "产品J",
+            "GoodDetails": "这是产品J的详细信息",
+            "GoodCost": "25.00",
+            "GoodCount": "6"
+        },
+        {
+            "GoodId": "100",
+            "GoodName": "GoodName111",
+            "GoodDetails": "Details111",
+            "GoodCost": "10.0011",
+            "GoodCount": "511"
+        },
+        {
+            "GoodId": "101",
+            "GoodName": "GoodName233123",
+            "GoodDetails": "Details233321",
+            "GoodCost": "15.5033123",
+            "GoodCount": "10334567"
+        }
+    ]
+}

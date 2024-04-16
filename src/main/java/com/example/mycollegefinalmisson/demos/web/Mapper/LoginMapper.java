@@ -18,5 +18,5 @@ import java.io.Serializable;
 @Mapper
 public interface LoginMapper extends BaseMapper<User> {
     @Select("select * from User where UserId = #{UserId} and UserPasswd = #{UserPasswd}")
-    User SelectUserIdandPassword(@Param("UserId")String userId,@Param("UserPasswd")String UserPassword);
+    User SelectUserIdandPassword(User user);
 }

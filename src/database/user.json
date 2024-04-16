@@ -1,0 +1,16 @@
+{
+    "RECORDS": [
+        {
+            "UserId": "root",
+            "UserPasswd": "root",
+            "UserName": "ROOT",
+            "UserAuth": "2"
+        },
+        {
+            "UserId": "user",
+            "UserPasswd": "user",
+            "UserName": "USER",
+            "UserAuth": "1"
+        }
+    ]
+}

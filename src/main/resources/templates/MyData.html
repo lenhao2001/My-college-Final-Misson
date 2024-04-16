@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MyData</title>
+<!--    <script th:inline="javascript">-->
+<!--        window.onload = function(){-->
+<!--            var message = "no message";-->
+<!--            if (message != "no message"){-->
+<!--                alert(message);-->
+<!--            }-->
+<!--        };-->
+<!--    </script>-->
+</head>
+<body>
+<h4 th:text="显示 + ${MyId} + 的商品列表"></h4>
+<a th:href="@{/}">回到首页</a>
+
+<ul>
+    <li th:each="own : ${MyOwnGoods}">
+        用户ID：<span th:text="${own.userId}"></span>
+        商品Id：<span th:text="${own.goodId}"></span>
+        <a th:href="@{/My/EditGoodPage/{goodId}(goodId=${own.goodId})}">更新</a>
+        <a th:href="@{/My/DelGood/{goodId}/{userId}(goodId=${own.goodId},userId=${own.userId})}">删除</a>
+    </li>
+</ul>
+
+
+</body>
+</html>

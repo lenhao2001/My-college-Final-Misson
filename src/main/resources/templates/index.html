@@ -8,13 +8,18 @@
     <title >default Index</title>
 </head>
 <body>
-    <h5 th:text="${message}">Hello there! </h5>
-    <h5>testtest!!!</h5>
+    <h3 th:text="${message}">Hello there! </h3>
+    <br>
+    <a th:href="@{/My/{id}(id=${welMessage})}">我的商品</a>
+
 
     <p th:each="good : ${goodsList}">
-        <span th:text="${good.getGoodName()}">Default</span>
-        <span th:text="${good.getGoodCost()}">Default</span>
-        <span th:text="${good.getGoodCount()}">Default</span>
+        <span th:text="${good.getGoodName()}">Name()</span>
+        <span th:text="${good.getGoodCost()}">Cost()</span>
+        <span th:text="${good.getGoodCount()}">Count()</span>
+        <span th:text="${good.goodId}">ID</span>
+        <span th:text="${good.getGoodDetails()}">Details()</span>
+
     </p>
 </body>
 </html>

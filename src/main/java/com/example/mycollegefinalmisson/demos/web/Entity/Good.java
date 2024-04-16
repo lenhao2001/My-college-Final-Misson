@@ -1,5 +1,6 @@
 package com.example.mycollegefinalmisson.demos.web.Entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
@@ -14,6 +15,7 @@ import javax.persistence.Table;
 @Data
 @TableName("good")
 public class Good {
+    @TableId("GoodId")
     private int GoodId;
     private String GoodName;
     private String GoodDetails;

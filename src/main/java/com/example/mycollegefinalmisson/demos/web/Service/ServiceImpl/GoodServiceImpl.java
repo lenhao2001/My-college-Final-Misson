@@ -1,11 +1,13 @@
 package com.example.mycollegefinalmisson.demos.web.Service.ServiceImpl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.example.mycollegefinalmisson.demos.web.Entity.Good;
+import com.example.mycollegefinalmisson.demos.web.Entity.Own;
 import com.example.mycollegefinalmisson.demos.web.Mapper.GoodMapper;
 import com.example.mycollegefinalmisson.demos.web.Service.GoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -24,14 +26,60 @@ public class GoodServiceImpl implements GoodService {
     @Override
     public List<Good> getIndexGoodsPage() {
 
-//        QueryWrapper<Good> queryWrapper = new QueryWrapper<>();
-//        queryWrapper.select("GoodName","GoodCost","GoodCount"); //bug ERROR 28348[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.mycollegefinalmisson.demos.web.Mapper.GoodMapper.selectList] with root cause
-//        queryWrapper.select("true");
-//        List<Good> goodList = goodMapper.selectList(queryWrapper);
-//        System.out.println(goodList.toString());
-
         List<Good> goodList = goodMapper.selectListTEST();
 
         return goodList;
     }
+
+    @Override
+    public List<Own> getMyGoodsPage(String UserId) {
+        List<Own> OwnGoods = goodMapper.selectMyGoodList(UserId);
+        return OwnGoods;
+    }
+
+    @Override
+    public Good getGoodByGoodid(int GoodsId) {
+        Good good = goodMapper.selectGoodByGoodId(GoodsId);
+        return good;
+    }
+
+
+
+    @Override
+    @Transactional
+    public boolean DelGoodByGoodId(int GoodId) {
+
+        int delGoodCount = goodMapper.DelGoodByGoodId(GoodId);
+        if (delGoodCount == 0){
+            System.out.println("database not find goodid :"+ GoodId);
+            return false;
+        }
+
+        int delOwnCount = goodMapper.DelOwnByGoodId(GoodId);
+        if (delOwnCount == 0){
+            System.out.println("database not find goodid :"+ GoodId);
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public Own getGoodsOwner(int GoodId) {
+        return goodMapper.selectGoodsOwner(GoodId);
+    }
+
+    @Override
+    public boolean updateGoodsByGoodsId(Good good) {
+//        UpdateWrapper<Good> wrapper = new UpdateWrapper<>();
+//        wrapper.eq("GoodId",good.getGoodId());
+
+        int UpdateCount = goodMapper.updateById(good);
+        if (UpdateCount>0){
+            return true;
+        }
+        return false;
+    }
+
+
 }

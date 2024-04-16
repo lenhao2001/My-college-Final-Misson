@@ -1,0 +1,24 @@
+{
+    "RECORDS": [
+        {
+            "UserId": "root",
+            "GoodId": "1"
+        },
+        {
+            "UserId": "root",
+            "GoodId": "2"
+        },
+        {
+            "UserId": "root",
+            "GoodId": "7"
+        },
+        {
+            "UserId": "root",
+            "GoodId": "100"
+        },
+        {
+            "UserId": "root",
+            "GoodId": "101"
+        }
+    ]
+}

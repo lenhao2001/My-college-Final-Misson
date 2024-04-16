@@ -1,10 +1,8 @@
 package com.example.mycollegefinalmisson.demos.web.Service;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.example.mycollegefinalmisson.demos.web.Entity.Good;
-import org.omg.CORBA.PUBLIC_MEMBER;
+import com.example.mycollegefinalmisson.demos.web.Entity.Own;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,6 +11,16 @@ import java.util.List;
  * Date: 2024-03-30
  * Time: 17:13
  */
-public interface GoodService {
-    public List<Good> getIndexGoodsPage();
-}
+    public interface GoodService {
+        public List<Good> getIndexGoodsPage();
+
+        List<Own> getMyGoodsPage(String UserId);
+
+        Good getGoodByGoodid(int GoodsId);
+
+        boolean DelGoodByGoodId(int GoodId);
+
+        Own getGoodsOwner(int GoodId);
+
+        boolean updateGoodsByGoodsId(Good good);
+    }

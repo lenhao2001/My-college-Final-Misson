@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<form th:action="@{/My/UpdateGoodForm}" th:object="${Good}">
+    <!--
+            private int GoodId;
+            private String GoodName;
+            private String GoodDetails;
+            private String GoodCost;
+            private String GoodCount;
+    -->
+    <label for="Id">GoodId:</label>
+    <input type="text" id="Id" th:field="*{goodId}" readonly>
+
+    <label for="name">GoodName:</label>
+    <input type="text" id="name" th:field="*{goodName}">
+
+    <label for="Details">GoodDetails:</label>
+    <input type="text" id="Details" th:field="*{goodDetails}">
+
+    <label for="Cost">GoodCost:</label>
+    <input type="text" id="Cost" th:field="*{goodCost}">
+
+    <label for="Count">GoodCount:</label>
+    <input type="text" id="Count" th:field="*{goodCount}">
+
+    <input type="submit" value="Update">
+</form>
+</body>
+</html>

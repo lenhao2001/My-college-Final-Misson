@@ -1,5 +1,6 @@
 package com.example.mycollegefinalmisson;
 
+import com.example.mycollegefinalmisson.demos.web.Entity.Good;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,11 @@ class MyCollegeFinalMissonApplicationTests {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void testGoodDATAANNO(){
+        Good good = new Good();
+
     }
 }

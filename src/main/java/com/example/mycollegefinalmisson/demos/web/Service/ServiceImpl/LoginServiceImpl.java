@@ -21,12 +21,12 @@ public class LoginServiceImpl implements LoginService{
     @Override
     public int AuthenticateUser(User user){
 
-        User userReturn = loginMapper.SelectUserIdandPassword(user.getUserId(),user.getUserPasswd());
+        User userReturn = loginMapper.SelectUserIdandPassword(user);
 
         int Pass = 0; //默认账号不存在
 
         if (userReturn == null){
-            return Pass; // 没查询到账号返回默认情况--=指账号不存在
+            return Pass; // 没查询到账号返回默认情况--=账号不存在
         } else if (!userReturn.getUserPasswd().equals(user.getUserPasswd())) {
             return Pass+1; //查询到账号，但密码不正确.
         }
